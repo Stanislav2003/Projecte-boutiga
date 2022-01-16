@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="ropahombre.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+/*
+User ID user_yFccRr1DIDofvVZMQn0KF
+Access Token 532a4cfff3560265a5d8d599bbf0044e
+
+*/
+
+
+</script>
+
+  </head>
+  <body>
+    <div class="container">
+      <form id="contact" method="post">
+        <h3>....estas a punt de realitzar la teva compra!</h3>
+        <h4>Ingresa les dades seguents per validar el teu correu i completar el registre!</h4>
+        <fieldset>
+          <input
+            placeholder="Nom i Cognoms"
+            type="text"
+            tabindex="1"
+            required
+            autofocus
+            class="username"
+          />
+        </fieldset>
+        <fieldset>
+          <input
+            placeholder="correu electronic"
+            type="email"
+            tabindex="2"
+            required
+            class="email"
+          />
+        </fieldset>
+        <fieldset>
+          <textarea
+            placeholder="....alguna sugerencia per millorar? Comenta aqui>:"
+            tabindex="5"
+            required
+            class="message"
+   
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <button
+            name="validar"
+            type="submit"
+            id="contact-submit"
+            data-submit="...Sending"
+            class="submit"
+          >
+            Validar correu!
+          </button>
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- loader -->
+    <div class="loader">
+      <img
+        src="https://media.giphy.com/media/MEiZ5h8lOkM7rwideE/giphy.gif"
+        alt=""
+      />
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+   
+    <script type="text/javascript">
+      // User ID
+      // user_yFccRr1DIDofvVZMQn0KF
+
+      // Access Token
+      // 532a4cfff3560265a5d8d599bbf0044e
+
+
+      (function () {
+        // emailjs.init("USERID");
+        emailjs.init("user_yFccRr1DIDofvVZMQn0KF");
+      })();
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+ <script> 
+/**
+        emailjs.send("SERVICE ID", "TEMPLATE NAME", {
+          to_name: "USERNAME",
+          from_name: "FROM NAME",
+          message: "MESSAGE",
+        });
+       **/
+       
+       function getRandomInt(min, max) {
+              return Math.floor(Math.random() * (max - min)) + min;
+       }
+
+      var randomNumero=getRandomInt(100,200);
+      function validate() {
+        let loader = document.querySelector(".loader");
+        let name = document.querySelector(".username");
+        let email = document.querySelector(".email");
+        let btn = document.querySelector(".submit");
+
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (name.value == "" || email.value == "" || msg.value == "") {
+            emptyerror();
+          }  
+          
+          else{
+            sendmail(name.value, email.value,randomNumero);
+            setTimeout(paginaValida,4000);
+            success();
+          }
+        });
+      }
+      validate();
+
+      function sendmail(name, email, msg) {
+        emailjs.send("service_v5g0guh", "template_eiuucf6", {
+          to_name: name,
+          from_name: email,
+          message: msg,
+        });
+      }
+
+      function emptyerror() {
+        Swal.fire({
+          icon: "error",
+          title: "Ostres...",
+          text: "Els camps no poden estar buids!",
+        });
+      }
+
+      function error() {
+        Swal.fire({
+          icon: "error",
+          title: "Ostres...",
+          text: "Alguna cosa ha anat malament!",
+        });
+      }
+      
+      function paginaValida(){
+       swal({
+            text: 'introdueix PIN de validacio del correu".',
+            content: "input",
+           }).then((response)=>{
+             if(response==randomNumero){
+               pinCorrecte();
+              }
+             else{ 
+               error();
+              }
+            })
+      }
+
+    function pinCorrecte(){
+      Swal.fire({
+          icon: "success",
+          title: "Oleee!...",
+          text: "Correu verificat, registre completat!",
+          });
+    }
+
+      function success() {
+        Swal.fire({
+          icon: "success",
+          title: "Perfecte!...",
+          text: "S'ha enviat un codi de  validació al teu correu!",
+        });
+      }
+      
+
+     </script>
+  </body>
+</html>
