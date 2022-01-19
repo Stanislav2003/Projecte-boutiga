@@ -1,0 +1,104 @@
+
+.container4{
+  margin: auto;
+  background-color: rgb(221, 220, 220);
+  padding-top: 2%;
+  height: 100px;
+}
+
+.container4 h1{
+  text-align: left;
+  padding-left: 5%;
+}
+
+.container3{
+    margin: auto;
+    background-color: rgb(221, 220, 220);
+    padding-top: 2%;
+    height: 6000px;
+  }
+  
+  .container3 h1{
+    text-align: left;
+    padding-left: 5%;
+  }
+
+.container4 img{
+  width: 300px;
+  padding-right: 5%;
+}
+  
+  
+  
+  .fhLinks {
+      line-height: 18px;
+      z-index: 2;
+      width: 100%;
+      padding: 0 15px;
+      margin: -5px 0;
+      padding-right: 30%;
+  }
+
+  .nououo{
+    background-color: red;
+    margin-top: 500px;
+   
+  }
+  
+  .fhLinks ul li a {
+    margin-left:10px;
+    text-transform: uppercase;
+    min-width: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #textfondo{
+    background-image: url('fondot.jpg');
+    width: 60%;
+    background-position: 70px;
+    background-repeat: no-repeat;
+  }
+
+  #oferta {
+    background-color:red;
+    color: white;
+    width: 380px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    height:11px;
+    margin-left: 15px;
+    }
+
+#talla{
+    background-color: white;
+    width: 360px;
+    padding: 10px;
+    height:22px;
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+}
+
+#talla:hover{
+    background-color: grey;
+}
+
+#desc{
+    font-size: 12px;
+}
+
+  #imatge {
+    height: 350px;
+    width: 380px;
+    margin: 15px;
+    margin-bottom: 0;
+  }
+  
+  td p,h4{
+    text-align: left;
+    padding-left: 23px;
+  }
+  
